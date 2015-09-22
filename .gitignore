@@ -59,3 +59,4 @@ BsGridExtesnionMVC/BsGridExtesnionMVC/obj/Release/*.*
 *.txt
 BsGridExtesnionMVC/BsGridExt.Examples/obj/Debug/BsGridExt.Examples.csprojResolveAssemblyReference.cache
 BsGridExtesnionMVC/BsGridExt.Examples/obj/Debug/BsGridExt.Examples.pdb
+*.suo

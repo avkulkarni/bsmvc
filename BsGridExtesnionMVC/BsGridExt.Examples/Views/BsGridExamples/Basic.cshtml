@@ -3,12 +3,14 @@
     ViewBag.Title = "Basic";
 }
 
-<link rel="stylesheet" href="~/BsGrid/bootstrap3-editable/css/bootstrap-editable.css" />
 <link rel="stylesheet" href="~/Content/bootstrap.css" />
-<link rel="stylesheet" href="~/BsGrid/bootstrap3-editable/css/bootstrap-editable.css" />
+<link rel="stylesheet" href="~/BsGrid/bootstrap-table/bootstrap-table.css" />
 <link rel="stylesheet" href="~/BsGrid/bootstrap3-editable/css/bootstrap-editable.css" />
 
+<script type="text/javascript" src="~/Scripts/jquery-2.1.4.js"></script>
 <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+<script type="text/javascript" src="~/BsGrid/bootstrap-table/bootstrap-table.js"></script>
+<script type="text/javascript" src="~/BsGrid/bootstrap-table/extensions/editable/bootstrap-table-editable.js"></script>
 <script type="text/javascript" src="~/BsGrid/bootstrap3-editable/js/bootstrap-editable.js"></script>
 
 <h2>Basic</h2>
@@ -19,4 +21,6 @@
     .AddColumn(new BsColumn("EmployeeName").Editable().Classess(new List<String>() { "col-xs-2" }))
     .Url(Url.Action("GetData", "BsGridExamples"))
     .Classes(new List<String>() { "table", "table-hover", "table-condensed" })
+    .Height(400)
+    .Pagination(true)
     .Render())
