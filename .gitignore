@@ -47,3 +47,15 @@ BsGridExtesnionMVC/BsGridExt.Examples/bin/Debug/*.*
 BsGridExtesnionMVC/BsGridExt.Examples/obj/Debug/*.*
 BsGridExtesnionMVC/BsGridExt.Examples/bin/Release/*.*
 BsGridExtesnionMVC/BsGridExt.Examples/obj/Release/*.*
+BsGridExtesnionMVC/BsGridExtesnionMVC/bin
+BsGridExtesnionMVC/BsGridExtesnionMVC/bin/Debug
+BsGridExtesnionMVC/BsGridExtesnionMVC/bin/Debug/*.*
+BsGridExtesnionMVC/BsGridExtesnionMVC/bin/Release/*.*
+BsGridExtesnionMVC/BsGridExtesnionMVC/bin/Release
+BsGridExtesnionMVC/BsGridExtesnionMVC/obj/Debug
+BsGridExtesnionMVC/BsGridExtesnionMVC/obj/Debug/*.*
+BsGridExtesnionMVC/BsGridExtesnionMVC/obj/Release
+BsGridExtesnionMVC/BsGridExtesnionMVC/obj/Release/*.*
+*.txt
+BsGridExtesnionMVC/BsGridExt.Examples/obj/Debug/BsGridExt.Examples.csprojResolveAssemblyReference.cache
+BsGridExtesnionMVC/BsGridExt.Examples/obj/Debug/BsGridExt.Examples.pdb
