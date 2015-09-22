@@ -41,3 +41,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+BsGridExtesnionMVC/BsGridExt.Examples/bin
+BsGridExtesnionMVC/BsGridExt.Examples/obj
+BsGridExtesnionMVC/BsGridExt.Examples/bin/Debug/*.*
+BsGridExtesnionMVC/BsGridExt.Examples/obj/Debug/*.*
+BsGridExtesnionMVC/BsGridExt.Examples/bin/Release/*.*
+BsGridExtesnionMVC/BsGridExt.Examples/obj/Release/*.*
