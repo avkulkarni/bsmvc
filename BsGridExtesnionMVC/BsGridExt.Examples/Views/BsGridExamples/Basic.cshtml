@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Basic";
+}
+
+<link rel="stylesheet" href="~/BsGrid/bootstrap3-editable/css/bootstrap-editable.css" />
+<link rel="stylesheet" href="~/Content/bootstrap.css" />
+<link rel="stylesheet" href="~/BsGrid/bootstrap3-editable/css/bootstrap-editable.css" />
+<link rel="stylesheet" href="~/BsGrid/bootstrap3-editable/css/bootstrap-editable.css" />
+
+<script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+<script type="text/javascript" src="~/BsGrid/bootstrap3-editable/js/bootstrap-editable.js"></script>
+
+<h2>Basic</h2>
+
+
+@(Html.BsGrid("_fromServer")
+    .AddColumn(new BsColumn("EmployeeId").Classess(new List<String>() { "col-xs-2" }))
+    .AddColumn(new BsColumn("EmployeeName").Editable().Classess(new List<String>() { "col-xs-2" }))
+    .Url(Url.Action("GetData", "BsGridExamples"))
+    .Classes(new List<String>() { "table", "table-hover", "table-condensed" })
+    .Render())
