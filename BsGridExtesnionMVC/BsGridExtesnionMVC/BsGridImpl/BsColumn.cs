@@ -17,7 +17,38 @@
         CENTER    
     }
 
-    public class BsColumn
+    public class ColumnsGroup
+    {
+        private List<Column> _gridColumns;   
+     
+        //public ColumnsGroup(Column bsColumn)
+        //{
+        //    this._gridColumns = new List<Column>();
+        //    this._gridColumns.Add(bsColumn);
+        //}
+
+        public ColumnsGroup AddColumn(Column column)
+        {
+            this._gridColumns.Add(column);
+            return this;
+        }
+
+        public ColumnsGroup AddColumn(Action<Column> actionPredicate)
+        {
+            Column columToAdd = new Column();
+            actionPredicate(columToAdd);
+            this._gridColumns.Add(columToAdd);
+            return this;
+        }
+
+        public ColumnsGroup AddColumn(IEnumerable<Column> column)
+        {
+            this._gridColumns.AddRange(column);
+            return this;
+        }
+    }
+
+    public class Column
     {
         private string _title;
         private string _field;
@@ -28,7 +59,9 @@
         private List<string> _columnClasses = new List<string>();
         private Boolean _clickToSelect = false;
 
-        public BsColumn(string columnTitle)
+        public Column() { }
+
+        public Column(string columnTitle)
         {
             this._title = columnTitle;
         }
@@ -37,7 +70,17 @@
         /// Sets data-editable attribute
         /// </summary>
         /// <returns></returns>
-        public BsColumn Editable()
+        public Column Title(string columnTitle)
+        {
+            this._title = columnTitle;            
+            return this;
+        }
+
+        /// <summary>
+        /// Sets data-editable attribute
+        /// </summary>
+        /// <returns></returns>
+        public Column Editable()
         {
             this._isEditable = true;
             return this;
@@ -48,7 +91,7 @@
         /// </summary>
         /// <param name="field"></param>
         /// <returns></returns>
-        public BsColumn Sortable()
+        public Column Sortable()
         {
             this._isSortable = true;
             return this;
@@ -59,7 +102,7 @@
         /// </summary>
         /// <param name="field"></param>
         /// <returns></returns>
-        public BsColumn Field(string field)
+        public Column Field(string field)
         {
             this._field = field;
             return this;
@@ -70,7 +113,7 @@
         /// </summary>
         /// <param name="align"></param>
         /// <returns></returns>
-        public BsColumn Align(AlignType align)
+        public Column Align(AlignType align)
         {
             this._align = align.ToString().ToLower();
             return this;
@@ -81,7 +124,7 @@
         /// </summary>
         /// <param name="columnClasses"></param>
         /// <returns></returns>
-        public BsColumn Classess(IEnumerable<String> columnClasses)
+        public Column Classess(IEnumerable<String> columnClasses)
         {
             this._columnClasses.AddRange(columnClasses);
             return this;
@@ -93,7 +136,7 @@
         /// <param name="columnType"></param>
         /// <param name="clickToSelect"></param>
         /// <returns></returns>
-        public BsColumn Type(ColType columnType, Boolean clickToSelect)
+        public Column Type(ColType columnType, Boolean clickToSelect)
         {
             this._columnType = columnType;
             this._clickToSelect = clickToSelect;

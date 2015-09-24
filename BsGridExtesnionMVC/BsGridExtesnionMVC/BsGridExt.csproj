@@ -72,6 +72,7 @@
     <Compile Include="BsGridImpl\BsColumn.cs" />
     <Compile Include="BsGridImpl\BsGrid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WidgetCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

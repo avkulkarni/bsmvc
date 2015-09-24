@@ -14,9 +14,9 @@
         SEREVER
     }
     
-    public class BsHtmlGrid : IHtmlString
+    public class Grid : IHtmlString
     {
-        private List<BsColumn> _gridColumns = new List<BsColumn>();
+        private List<ColumnsGroup> _columnsGroups = new List<ColumnsGroup>();
         private string _gridId;
         private string _url;
         private List<String> _tableClasses = new List<string>();
@@ -29,7 +29,7 @@
         private int _dataHeight;
         private string _sidePagination = "client";
 
-        public BsHtmlGrid(string gridId)
+        public Grid(string gridId)
         {
             this._gridId = gridId;
             this._tableClasses.Add("table");
@@ -38,7 +38,7 @@
         }
 
 
-        public BsHtmlGrid Classes(IEnumerable<String> tableClasses)
+        public Grid Classes(IEnumerable<String> tableClasses)
         {
             _tableClasses.AddRange(tableClasses);
             _tableClasses = _tableClasses.Distinct().ToList();
@@ -50,29 +50,22 @@
         /// </summary>
         /// <param name="column"></param>
         /// <returns></returns>
-        public BsHtmlGrid AddColumn(BsColumn column)
+        public Grid ColumnsGroup(Func<Column, Column> actionPredicate)
         {
-            this._gridColumns.Add(column);
+            ColumnsGroup columnCollection = new ColumnsGroup();
+            actionPredicate.
+            //columnCollection.AddColumn(actionPredicate);
+           
+            //columnCollection.AddColumn(columns);            
             return this;
         }
-
-        /// <summary>
-        /// Adds Column to the Grid
-        /// </summary>
-        /// <param name="columns"></param>
-        /// <returns></returns>
-        public BsHtmlGrid AddColumn(IEnumerable<BsColumn> columns)
-        {
-            this._gridColumns.AddRange(columns);
-            return this;
-        }
-
+                
         /// <summary>
         /// Sets data-url attribute
         /// </summary>
         /// <param name="serverDataUrl"></param>
         /// <returns></returns>
-        public BsHtmlGrid Url(string url)
+        public Grid Url(string url)
         {
             this._url = url;
             return this;
@@ -83,7 +76,7 @@
         /// </summary>
         /// <param name="isDataStriped"></param>
         /// <returns></returns>
-        public BsHtmlGrid DataStriped(Boolean isDataStriped)
+        public Grid DataStriped(Boolean isDataStriped)
         {
             this._isDataStriped = isDataStriped;
             return this;
@@ -94,7 +87,7 @@
         /// </summary>
         /// <param name="isDataSearch"></param>
         /// <returns></returns>
-        public BsHtmlGrid DataSearch(Boolean isDataSearch)
+        public Grid DataSearch(Boolean isDataSearch)
         {
             this._isDataSearch = isDataSearch;
             return this;
@@ -105,7 +98,7 @@
         /// </summary>
         /// <param name="isShowRefresh"></param>
         /// <returns></returns>
-        public BsHtmlGrid ShowRefresh(Boolean isShowRefresh)
+        public Grid ShowRefresh(Boolean isShowRefresh)
         {
             this._isShowRefresh = isShowRefresh;
             return this;
@@ -116,7 +109,7 @@
         /// </summary>
         /// <param name="isShowToggle"></param>
         /// <returns></returns>
-        public BsHtmlGrid ShowToggle(Boolean isShowToggle)
+        public Grid ShowToggle(Boolean isShowToggle)
         {
             this._isShowToggle = isShowToggle;
             return this;
@@ -127,7 +120,7 @@
         /// </summary>
         /// <param name="isShowColumns"></param>
         /// <returns></returns>
-        public BsHtmlGrid ShowColumns(Boolean isShowColumns)
+        public Grid ShowColumns(Boolean isShowColumns)
         {
             this._isShowColumns = isShowColumns;
             return this;
@@ -138,7 +131,7 @@
         /// </summary>
         /// <param name="isPagination"></param>
         /// <returns></returns>
-        public BsHtmlGrid Pagination(Boolean isPagination)
+        public Grid Pagination(Boolean isPagination)
         {
             this._isPagination = isPagination;
             return this;
@@ -149,7 +142,7 @@
         /// </summary>
         /// <param name="dataHeight"></param>
         /// <returns></returns>
-        public BsHtmlGrid Height(int dataHeight)
+        public Grid Height(int dataHeight)
         {
             this._dataHeight = dataHeight;
             return this;
@@ -161,7 +154,7 @@
         /// </summary>
         /// <param name="spOption"></param>
         /// <returns></returns>
-        public BsHtmlGrid SidePagination(SidePageOptions spOption)
+        public Grid SidePagination(SidePageOptions spOption)
         {
             this._sidePagination = spOption.ToString().ToLower();
             return this;
@@ -214,7 +207,7 @@
 
             StringBuilder htmlRowHeaders = new StringBuilder();
             htmlRowHeaders.Append("<thead> <tr>");
-            this._gridColumns.ForEach(gr => htmlRowHeaders.Append(gr.ToString()));            
+            //this._gridColumns.ForEach(gr => htmlRowHeaders.Append(gr.ToString()));            
             htmlRowHeaders.Append(" </tr> </thead>");
 
             htmlTable.Append(htmlRowHeaders);

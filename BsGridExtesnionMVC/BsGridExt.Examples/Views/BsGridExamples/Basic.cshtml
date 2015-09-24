@@ -15,12 +15,47 @@
 
 <h2>Basic</h2>
 
-
-@(Html.BsGrid("_fromServer")
-    .AddColumn(new BsColumn("EmployeeId").Classess(new List<String>() { "col-xs-2" }))
-    .AddColumn(new BsColumn("EmployeeName").Editable().Classess(new List<String>() { "col-xs-2" }))
+@(Html.BsWidgets().Grid("_fromServer")
+    .ColumnsGroup(column => {
+        column.Title("EmployeeId").Editable().Classess(new List<String>() { "col-xs-2" });
+        column.Title("EmployeeName").Editable().Classess(new List<String>() { "col-xs-2" });
+    })
     .Url(Url.Action("GetData", "BsGridExamples"))
     .Classes(new List<String>() { "table", "table-hover", "table-condensed" })
     .Height(400)
     .Pagination(true)
     .Render())
+    
+
+<!--
+<div class="row">
+    <table class="table table-hover table-striped"
+           id="_mysomegrid"
+           data-toggle="table"
+           data-url='@Url.Action("Getdata", "BsGridExamples")'
+           data-height="400"
+           data-pagination="true"
+           data-search="true"
+           data-show-refresh="true"
+           data-show-toggle="true"
+           data-show-columns="true">
+        <thead>
+            <tr>
+                <th class="col-xs-2" data-field="EmployeeId" data-sortable="true">EmployeeId</th>
+                <th class="col-xs-2" data-field="EmployeeName" data-sortable="true" data-editable="true">EmployeeName</th>
+            </tr>
+        </thead>
+    </table>
+           
+           
+</div>
+
+<script>
+    function someFunction() {
+        return {
+            type: 'text',
+            title: 'Yes it Is'
+        };
+    };
+</script>
+-->

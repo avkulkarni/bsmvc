@@ -1,12 +1,13 @@
 ﻿namespace System.Web.Mvc.Html
 {
+    using BsGridExt;
     using BsGridExt.BsGridImpl;
 
-    public static class BsGridHtmlHelper
+    public static class WidgetHtmlHelper
     {
-        public static BsHtmlGrid BsGrid(this HtmlHelper htmlHelper, string gridId)
+        public static WidgetCollection BsWidgets(this HtmlHelper htmlHelper)
         {
-            return new BsHtmlGrid(gridId);
+            return new WidgetCollection();
         }
     }
 }
