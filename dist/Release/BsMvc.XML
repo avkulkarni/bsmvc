@@ -1,0 +1,654 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BsMvc</name>
+    </assembly>
+    <members>
+        <member name="M:System.Web.Mvc.Html.Column.Radio">
+            <summary>
+            True to show a radio. The radio column has fixed width.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.CheckBox">
+            <summary>
+            True to show a checkbox. The checkbox column has fixed width.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Field(System.String)">
+            <summary>
+            The column field name.
+            </summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.TitleTooltip(System.String)">
+            <summary>
+            The column title tooltip text. This option also support the title HTML attribute
+            </summary>
+            <param name="titleTooltip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Class(System.String)">
+            <summary>
+            The column class name.
+            </summary>
+            <param name="columnClasses"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.RowSpan(System.Int32)">
+            <summary>
+            Indicate how many rows a cell should take up.
+            </summary>
+            <param name="rowSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.ColSpan(System.Int32)">
+            <summary>
+            Indicate how many columns a cell should take up.
+            </summary>
+            <param name="colSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Align(System.String)">
+            <summary>
+            Indicate how to align the column data. 
+            </summary>
+            <param name="align">'left', 'right', 'center' can be used.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.hAlign(System.String)">
+            <summary>
+            Indicate how to align the table header. 
+            </summary>
+            <param name="align">'left', 'right', 'center' can be used.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.fAlign(System.String)">
+            <summary>
+            Indicate how to align the table footer.
+            </summary>
+            <param name="align">'left', 'right', 'center' can be used.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.vAlign(System.String)">
+            <summary>
+            Indicate how to align the cell data.
+            </summary>
+            <param name="align">'top', 'middle', 'bottom' can be used.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Width(System.Int32)">
+            <summary>
+            The width of column. If not defined, the width will auto expand to fit its contents. 
+            Though if the table is left responsive and sized too small this 'width' might be ignored (use min/max-width via class or such then).
+            </summary>
+            <param name="width"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Sortable">
+            <summary>
+            True to allow the column can be sorted.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Order(System.String)">
+            <summary>
+            The default sort order, can only be 'asc' or 'desc'.
+            </summary>
+            <param name="order">'asc' or 'desc'.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Visible(System.Boolean)">
+            <summary>
+            False to hide the columns item.
+            </summary>
+            <param name="isVisible">true or false</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.CardVisible(System.Boolean)">
+            <summary>
+            False to hide the columns item in card view state.
+            </summary>
+            <param name="isCardVisible">true or false</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Switchable(System.Boolean)">
+            <summary>
+            False to disable the switchable of columns item.
+            </summary>
+            <param name="isSwitchable">true or false</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.ClickToSelect(System.Boolean)">
+            <summary>
+            True to select checkbox or radiobox when the column is clicked.
+            </summary>
+            <param name="isClickToSelect">true or false</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Formatter(System.String)">
+            <summary>
+            The context (this) is the column Object. 
+            The cell formatter function, take three parameters: 
+            value: the field value. 
+            row: the row record data.
+            index: the row index.
+            </summary>
+            <param name="formatterFunctionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.FooterFormatter(System.String)">
+            <summary>
+            The context (this) is the column Object. 
+            The function, take one parameter: 
+            data: Array of all the data rows. 
+            the function should return a string with the text to show in the footer cell.
+            </summary>
+            <param name="footerFormatter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Sorter(System.String)">
+            <summary>
+            The custom field sort function that used to do local sorting, take two parameters: 
+            a: the first field value.
+            b: the second field value.
+            </summary>
+            <param name="sorterFunctionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.SortName(System.String)">
+            <summary>
+            Provide a customizable sort-name, not the default sort-name in the header, or the field name of the column. 
+            For example, a column might display the value of fieldName of "html" such as "<b><span style="color:red">abc</span></b>", 
+            but a fieldName to sort is "content" with the value of "abc".
+            </summary>
+            <param name="sortName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.CellStyle(System.String)">
+            <summary>
+            The cell style formatter function, take three parameters: 
+            value: the field value.
+            row: the row record data.
+            index: the row index.
+            Support classes or css.
+            </summary>
+            <param name="cellStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Searchable(System.Boolean)">
+            <summary>
+            True to search data for this column.
+            </summary>
+            <param name="isSearchable">true or false</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.SearchFormatter(System.Boolean)">
+            <summary>
+            True to search use formated data.
+            </summary>
+            <param name="isSearchFormatter">true or false</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.Column.Editable(System.String,System.String,System.String,System.String)">
+            <summary>
+            Set the column editable options.
+            </summary>
+            <param name="type">Can support following : 
+            <para >text | textarea | select | date | datetime | dateui | combodate | checklist | wysihtml5 | typeahead | typeaheadjs | select2 </para>
+            <para> html5types can have following options : password | email | url | tel | number | range | time ] </para> 
+            </param>
+            <param name="title">Edit dialog title</param>
+            <param name="container">Edit dialog container</param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Classes(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            The class name of table. By default, the table is bordered, you can add 'table-no-bordered' to remove table-bordered style.
+            </summary>
+            <param name="tableClasses"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Height(System.Int32)">
+            <summary>
+            The height of table.
+            </summary>
+            <param name="dataHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.UndefinedText(System.String)">
+            <summary>
+            Defines the default undefined text.
+            </summary>
+            <param name="undefinedText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Striped">
+            <summary>
+            True to stripe the rows.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SortName(System.String)">
+            <summary>
+            Defines which column can be sorted.
+            </summary>
+            <param name="sortName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SortOrder(System.String)">
+            <summary>
+            Defines the column sort order, can only be 'asc' or 'desc'.
+            </summary>
+            <param name="sortOrder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.IconsPrefix(System.String)">
+            <summary>
+            Defines icon set name ('glyphicon' or 'fa' for FontAwesome). By default 'glyphicon' is used.
+            </summary>
+            <param name="iconsPrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Columns(System.Collections.Generic.List{System.Web.Mvc.Html.Column})">
+            <summary>
+            The table columns list
+            </summary>
+            <param name="columns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Method(System.String)">
+            <summary>
+            The method type to request remote data.
+            </summary>
+            <param name="methodType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Url(System.String)">
+            <summary>
+            <para>A URL to request data from remote site. </para> 
+            <para>Note that the required server response format is different depending on whether the 'sidePagination' option is specified.</para> 
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Cache(System.Boolean)">
+            <summary>
+            False to disable caching of AJAX requests.
+            </summary>
+            <param name="isCache"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ContentType(System.String)">
+            <summary>
+            The contentType of request remote data.
+            </summary>
+            <param name="contentType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.DataType(System.String)">
+            <summary>
+            The type of data that you are expecting back from the server.
+            </summary>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.AjaxOptions(System.String)">
+            <summary>
+            Additional options for submit ajax request. 
+            </summary>
+            <param name="ajaxOptions">a JSON string for ajax options</param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.QueryParams(System.String)">
+            <summary>
+            <para>When requesting remote data, you can send additional parameters by modifying queryParams. </para>
+            <para>If queryParamsType = 'limit', the params object contains: </para>
+            <para>limit, offset, search, sort, order Else, it contains: </para>
+            <para>pageSize, pageNumber, searchText, sortName, sortOrder. </para>
+            <para>Return false to stop request.</para>
+            </summary>
+            <param name="queryParamsFunName">Name of the function that you have written in javascript.</param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.QueryParamsType(System.String)">
+            <summary>
+            Set 'limit' to send query params width RESTFul type.
+            </summary>
+            <param name="queryParamsType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ResponseHandler(System.String)">
+            <summary>
+            <para>Before load remote data, handler the response data format, </para>
+            <para>the parameters object contains: res: the response data.</para>
+            </summary>
+            <param name="responseHandlerFunName">response handler function name that you have written in javascript</param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Pagination">
+            <summary>
+            True to show a pagination toolbar on table bottom
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SidePagination(BsMvc.Widgets.Grid.EPagination)">
+            <summary>
+            <para>Defines the side pagination of table, can only be 'client' or 'server'. </para>
+            <para>Using 'server' side requires either setting the 'url' or 'ajax' option. </para>
+            <para>Note that the required server response format is different depending on </para>
+            <para>whether the 'client' or 'server' option is specified.</para>
+            </summary>
+            <param name="spOption"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PageNumber(System.Int32)">
+            <summary>
+            When set pagination property, initialize the page number.
+            </summary>
+            <param name="pageNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PageSize(System.Int32)">
+            <summary>
+            When set pagination property, initialize the page size.
+            </summary>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PageList(System.String)">
+            <summary>
+            <para>When set pagination property, initialize the page size selecting list. </para>
+            <para>If you include the 'All' option, all the records will be shown in your table</para>
+            </summary>
+            <param name="pageList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SelectItemName(System.String)">
+            <summary>
+            The name of radio or checkbox input.
+            </summary>
+            <param name="selectItemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SmartDisplay(System.Boolean)">
+            <summary>
+            True to display pagination or card view smartly.
+            </summary>
+            <param name="smartDisplay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Search(System.Boolean)">
+            <summary>
+            Enable the search input.
+            </summary>
+            <param name="search"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.StrictSearch(System.Boolean)">
+            <summary>
+            Enable the strict search.
+            </summary>
+            <param name="strictSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SearchText(System.String)">
+            <summary>
+            When set search property, initialize the search text.
+            </summary>
+            <param name="searchText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SearchTimeOut(System.Int32)">
+            <summary>
+            Set timeout for search fire.
+            </summary>
+            <param name="searchTimeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.TrimOnSearch(System.Boolean)">
+            <summary>
+            True to trim spaces in search field.
+            </summary>
+            <param name="trimOnSearch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ShowHeader(System.Boolean)">
+            <summary>
+            False to hide the table header.
+            </summary>
+            <param name="showHeader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ShowFooter(System.Boolean)">
+            <summary>
+            If true shows summary footer row
+            </summary>
+            <param name="showFooter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ShowColumns(System.Boolean)">
+            <summary>
+            True to show the columns drop down list.
+            </summary>
+            <param name="isShowColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ShowRefresh(System.Boolean)">
+            <summary>
+            True to show the refresh button.
+            </summary>
+            <param name="isShowRefresh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ShowToggle(System.Boolean)">
+            <summary>
+            True to show the toggle button to toggle table / card view.
+            </summary>
+            <param name="isShowToggle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ShowPaginationSwitch(System.Boolean)">
+            <summary>
+            True to show the pagination switch button.
+            </summary>
+            <param name="showPaginationSwitch"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.MinimumCountColumns(System.Boolean)">
+            <summary>
+            The minimum number of columns to hide from the columns drop down list.
+            </summary>
+            <param name="minimumCountColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.IdField(System.String)">
+            <summary>
+            Indicate which field is an identity field.
+            </summary>
+            <param name="idField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.UniqueId(System.String)">
+            <summary>
+            Indicate an unique identifier for each row.
+            </summary>
+            <param name="uniqueId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.CardView(System.Boolean)">
+            <summary>
+            True to show card view table, for example mobile view.
+            </summary>
+            <param name="isCardView"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.DetailView(System.Boolean)">
+            <summary>
+            True to show detail view table.
+            </summary>
+            <param name="isDetailView"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.DetailFormatter(System.Boolean)">
+            <summary>
+            Format your detail view when detailView is set to true.
+            </summary>
+            <param name="detailFormatterFunName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SearchAlign(BsMvc.Widgets.Grid.EHAlign)">
+            <summary>
+            Indicate how to align the search input. 'left', 'right' can be used.
+            </summary>
+            <param name="searchAlign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ButtonsAlign(BsMvc.Widgets.Grid.EHAlign)">
+            <summary>
+            Indicate how to align the toolbar buttons. 'left', 'right' can be used.
+            </summary>
+            <param name="buttonsAlign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ToolbarAlign(BsMvc.Widgets.Grid.EHAlign)">
+            <summary>
+            Indicate how to align the custom toolbar. 'left', 'right' can be used.
+            </summary>
+            <param name="toolbarAlign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PaginationVAlign(BsMvc.Widgets.Grid.EVAlign)">
+            <summary>
+            Indicate how to align the pagination. 'top', 'bottom', 'both' (put the pagination on top and bottom) can be used.
+            </summary>
+            <param name="paginationVAlign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PaginationHAlign(BsMvc.Widgets.Grid.EHAlign)">
+            <summary>
+            Indicate how to align the pagination. 'left', 'right' can be used.
+            </summary>
+            <param name="paginationHAlign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PaginationDetailHAlign(BsMvc.Widgets.Grid.EHAlign)">
+            <summary>
+            Indicate how to align the pagination detail. 'left', 'right' can be used.
+            </summary>
+            <param name="paginationDetailHAlign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PaginationFirstText(System.String)">
+            <summary>
+            Indicate the icon or text to be shown in the pagination detail, the first button of the pagination detail.
+            </summary>
+            <param name="paginationFirstText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PaginationPreText(System.String)">
+            <summary>
+            Indicate the icon or text to be shown in the pagination detail, the previous button.
+            </summary>
+            <param name="paginationPreText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PaginationNextText(System.String)">
+            <summary>
+            Indicate the icon or text to be shown in the pagination detail, the next button.
+            </summary>
+            <param name="paginationNextText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.PaginationLastText(System.String)">
+            <summary>
+            Indicate the icon or text to be shown in the pagination detail, the last button.
+            </summary>
+            <param name="paginationLastText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.ClickToSelect(System.Boolean)">
+            <summary>
+            True to select checkbox or radiobox when clicking rows.
+            </summary>
+            <param name="clickToSelect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SingleSelect(System.Boolean)">
+            <summary>
+            True to allow checkbox selecting only one row.
+            </summary>
+            <param name="singleSelect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Toolbar(System.String)">
+            <summary>
+            A jQuery selector that indicates the toolbar
+            </summary>
+            <param name="toolbar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.CheckboxHeader(System.Boolean)">
+            <summary>
+            False to hide check-all checkbox in header row.
+            </summary>
+            <param name="checkboxHeader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.MaintainSelected(System.Boolean)">
+            <summary>
+            True to maintain selected rows on change page and search.
+            </summary>
+            <param name="maintainSelected"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Sortable(System.Boolean)">
+            <summary>
+            False to disable sortable of all columns.
+            </summary>
+            <param name="sortable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.SilentSort(System.Boolean)">
+            <summary>
+            Set false to sort the data silently. This options works when the sidePagination option is set to server.
+            </summary>
+            <param name="silentSort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.RowStyle(System.String)">
+            <summary>
+            <para>The row style formatter function, takes two parameters: </para>
+            <para>row: the row record data.</para>
+            <para>index: the row index.</para>
+            <para>Support classes or css.</para>
+            </summary>
+            <param name="rowStyleFunName">function name that you have written in javascript</param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.rowAttributes(System.String)">
+            <summary>
+            <para>The row attribute formatter function, takes two parameters: </para>
+            <para>row: the row record data.</para>
+            <para>index: the row index.</para>
+            <para>Support all custom attributes.</para>
+            </summary>
+            <param name="rowAttributesFunName">function name that you have written in javascript</param>
+            <returns></returns>
+        </member>
+        <member name="M:BsMvc.Widgets.Grid.Grid.Locale(System.String)">
+            <summary>
+            <para>Sets the locale to use (i.e. 'fr-CA'). Locale files must be pre-loaded. Allows for fallback locales, if loaded, in the following order:</para>
+            <para>First tries for the locale as specified,</para>
+            <para>Then tries the locale with '_' translated to '-' and the region code upper cased,</para>
+            <para>Then tries the the short locale code (i.e. 'fr' instead of 'fr-CA'),</para>
+            <para>And finally will use the last locale file loaded (or the default locale if no locales loaded).</para>
+            <para>If left undfined or an empty string, uses the last locale loaded (or 'en-US' if no locale files loaded).</para>
+            </summary>
+            <param name="locale"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
