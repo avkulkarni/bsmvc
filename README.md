@@ -6,14 +6,11 @@ An extension html (razor) helper that can be used in ASP .Net MVC projects for c
 ## How to use
 
 - Add referance  to *bsmvc.dll* (present in "/dist/release" folder of this project) into your project.
-- Make sure that all the css and js required are included in the page. This extension needs following css and js files.
+- You will need **latest version of bootstrap and jQuery**.
+- Apart from this you will need js and css for [Bootstrap Table](http://bootstrap-table.wenzhixin.net.cn).
 
 ```
-<link rel="stylesheet" href="~/Content/bootstrap.min.css">
 <link rel="stylesheet" href="~/Content/bootstrap-table/bootstrap-table.min.css">
-
-<script src="~/Scripts/jquery.js"></script>
-<script src="~/Scripts/bootstrap.js"></script>
 <script src="~/Scripts/bootstrap-table/bootstrap-table.min.js"></script>
 ```
 
