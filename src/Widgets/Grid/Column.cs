@@ -24,8 +24,8 @@
         [JsonProperty("class", DefaultValueHandling=DefaultValueHandling.Ignore)]        
         private string _columnClasses;
 
-        [JsonProperty("clickToSelect", DefaultValueHandling = DefaultValueHandling.Ignore)]        
-        private Boolean _clickToSelect;
+        [JsonProperty("clickToSelect")]        
+        private Boolean _clickToSelect = true;
 
         [JsonProperty("rowspan", DefaultValueHandling = DefaultValueHandling.Ignore)]        
         private int _rowSpan;
@@ -57,14 +57,14 @@
         [JsonProperty("order", DefaultValueHandling = DefaultValueHandling.Ignore)]        
         private string _order;
 
-        [JsonProperty("visible", DefaultValueHandling = DefaultValueHandling.Ignore)]        
-        private bool _isVisible;
+        [JsonProperty("visible")]        
+        private bool _isVisible = true;
 
-        [JsonProperty("cardVisible", DefaultValueHandling = DefaultValueHandling.Ignore)]        
-        private bool _isCardVisible;
+        [JsonProperty("cardVisible")]        
+        private bool _isCardVisible = true;
 
-        [JsonProperty("switchable", DefaultValueHandling = DefaultValueHandling.Ignore)]        
-        private bool _isSwitchable;
+        [JsonProperty("switchable")]        
+        private bool _isSwitchable = true;
 
         [JsonProperty("formatter", DefaultValueHandling = DefaultValueHandling.Ignore)]        
         private string _formatter;
@@ -81,11 +81,11 @@
         [JsonProperty("cellStyle", DefaultValueHandling = DefaultValueHandling.Ignore)]        
         private string _cellStyle;
 
-        [JsonProperty("searchable", DefaultValueHandling = DefaultValueHandling.Ignore)]        
-        private bool _isSearchable;
+        [JsonProperty("searchable")]        
+        private bool _isSearchable = true;
 
-        [JsonProperty("searchFormatter", DefaultValueHandling = DefaultValueHandling.Ignore)]        
-        private bool _isSearchFormatter;
+        [JsonProperty("searchFormatter")]        
+        private bool _isSearchFormatter = true;
 
         public Column(string columnTitle)
         {

@@ -223,6 +223,7 @@
         {
             this._gridId = gridId;
             this._htmlHelper = htmlHelper;
+            this._tableClasses.Add("table");
         }
 
         #region GRID_ATTRS
